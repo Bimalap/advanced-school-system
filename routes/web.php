@@ -75,7 +75,7 @@ Route::prefix('setups')->group(function(){
     Route::post('student/group/update/{id}', [StudentGroupController::class, 'StudentGroupUpdate'])->name('update.student.group');
     Route::get('student/group/delete/{id}', [StudentGroupController::class, 'StudentGroupDelete'])->name('student.group.delete');
 
-        // Student shify Routes 
+        // Student shift Routes 
 
     Route::get('student/shift/view', [StudentShiftController::class, 'ViewShift'])->name('student.shift.view');
     Route::get('student/shift/add', [StudentShiftController::class, 'StudentShiftAdd'])->name('student.shift.add');
