@@ -16,7 +16,7 @@ $route = Route::current()->getName();
                   <!-- logo for regular state and mobile devices -->
                      <div class="d-flex align-items-center justify-content-center">					 	
                           <img src="{{asset('backend/images/logo.png')}}" alt="">
-                          <h3><b>ADMIN </b> PANEL</h3>
+                          <h3><b>ADMIN </b> </h3> <h4>Dashboard</h4>
                      </div>
                 </a>
             </div>
@@ -78,7 +78,7 @@ $route = Route::current()->getName();
         
        		  
          
-        <li class="header nav-small-cap">User Interface</li>
+        <li class="header nav-small-cap"></li>
           
         <li class="treeview">
           <a href="#">
@@ -89,14 +89,14 @@ $route = Route::current()->getName();
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="components_alerts.html"><i class="ti-more"></i>Alerts</a></li>
-            <li><a href="components_badges.html"><i class="ti-more"></i>Badge</a></li>
-            <li><a href="components_buttons.html"><i class="ti-more"></i>Buttons</a></li>
-            <li><a href="components_sliders.html"><i class="ti-more"></i>Sliders</a></li>
-            <li><a href="components_dropdown.html"><i class="ti-more"></i>Dropdown</a></li>
-            <li><a href="components_modals.html"><i class="ti-more"></i>Modal</a></li>
-            <li><a href="components_nestable.html"><i class="ti-more"></i>Nestable</a></li>
-            <li><a href="components_progress_bars.html"><i class="ti-more"></i>Progress Bars</a></li>
+            <li><a href=""><i class="ti-more"></i></a></li>
+            <li><a href=""><i class="ti-more"></i></a></li>
+            <li><a href=""><i class="ti-more"></i></a></li>
+            <li><a href=""><i class="ti-more"></i></a></li>
+            <li><a href=""><i class="ti-more"></i></a></li>
+            <li><a href=""><i class="ti-more"></i></a></li>
+            <li><a href=""><i class="ti-more"></i></a></li>
+            <li><a href=""><i class="ti-more"></i> </a></li>
           </ul>
         </li>       
         
