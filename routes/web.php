@@ -12,6 +12,7 @@ use App\Http\Controllers\Backend\Setup\FeeCategoryController;
 use  App\Http\Controllers\Backend\Setup\FeeAmountController;
 use App\Http\Controllers\Backend\Setup\ExamTypeCOntroller;
 use App\Http\Controllers\Backend\Setup\SchoolSubjectController;
+use App\Http\Controllers\Backend\Setup\AssignSubjectController;
 
 Route::get('/', function () {
     return view('auth.login');
@@ -119,6 +120,11 @@ Route::prefix('setups')->group(function(){
     Route::get('school/subject/edit/{id}', [SchoolSubjectController::class, 'SubjectEdit'])->name('school.subject.edit');
     Route::post('school/subject/update/{id}', [SchoolSubjectController::class, 'SubjectUpdate'])->name('update.school.subject');
     Route::get('school/subject/delete/{id}', [SchoolSubjectController::class, 'SubjectDelete'])->name('school.subject.delete');
+
+//assign subject routes 
+
+    Route::get('assign/subject/view', [AssignSubjectController::class, 'ViewAssignSubject'])->name('assign.subject.view');
+
 
 });
 
