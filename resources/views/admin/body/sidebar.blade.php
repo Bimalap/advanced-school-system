@@ -76,6 +76,7 @@ $route = Route::current()->getName();
             <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Exam Type Setup</a></li>
             <li><a href="{{ route('school.subject.view') }}"><i class="ti-more"></i>Subject Setup</a></li>
             <li><a href="{{ route('assign.subject.view') }}"><i class="ti-more"></i> Assign Subject Setup</a></li>
+            <li><a href="{{ route('designation.view') }}"><i class="ti-more"></i> Designation Setup</a></li>
 
 
           </ul>
