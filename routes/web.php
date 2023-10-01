@@ -15,7 +15,9 @@ use App\Http\Controllers\Backend\Setup\SchoolSubjectController;
 use App\Http\Controllers\Backend\Setup\AssignSubjectController;
 use App\Http\Controllers\Backend\Setup\DesignationController;
 
-use App\Http\Controllers\Backend\Setup\StudentRegController;
+use App\Http\Controllers\Backend\student\StudentRegController;
+
+
 
 
 
@@ -151,7 +153,13 @@ Route::prefix('setups')->group(function(){
 Route::prefix('students')->group(function(){
 
     Route::get('/reg/view', [StudentRegController::class, 'StudentRegView'])->name('student.registration.view');
-});
+    Route::get('/reg/Add', [StudentRegController::class, 'StudentRegAdd'])->name('student.registration.add');
+    Route::post('/reg/store', [StudentRegController::class, 'StudentRegStore'])->name('store.student.registration');
+    Route::get('/year/class/wise', [StudentRegController::class, 'StudentClassYearWise'])->name('student.year.class.wise');
+
+
+    }); 
+ 
 
 
 
