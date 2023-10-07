@@ -36,12 +36,13 @@
   <img src="{{ public_path() . $image_path }}" width="100" height="100">
 
     </h2></td>
-    <td><h2>Advanced school System</h2>
-<p>XYZ STREET Nepal</p>
-<p>Phone : 091691453</p>
-<p>Email : support@advancedschoolsystem.com</p>
-<p> <b> Student Registration  Fee</b> </p>
 
+
+    <td><h2>Advaned school System</h2>
+<p>School Address</p>
+<p>Phone : 01-54236w</p>
+<p>Email : support@advancedschoolsystem.com</p>
+<p> <b> Student Monthly Fee</b> </p>
     </td> 
   </tr>
   
@@ -49,7 +50,7 @@
 </table>
 
 @php 
-$registrationfee = App\Models\FeeCategoryAmount::where('fee_category_id','5')->where('class_id',$details->class_id)->first();
+$registrationfee = App\Models\FeeCategoryAmount::where('fee_category_id','9')->where('class_id',$details->class_id)->first();
 $originalfee = $registrationfee->amount;
         $discount = $details['discount']['discount'];
         $discounttablefee = $discount/100*$originalfee;
@@ -97,7 +98,7 @@ $originalfee = $registrationfee->amount;
   </tr>
   <tr>
     <td>7</td>
-    <td><b>Registration Fee</b></td>
+    <td><b>Monthly Fee</b></td>
     <td>{{ $originalfee }} $</td>
   </tr>
   <tr>
@@ -108,7 +109,7 @@ $originalfee = $registrationfee->amount;
 
     <tr>
     <td>9</td>
-    <td><b>Fee For this Student </b></td>
+    <td><b>Fee For this Student of {{ $month }} </b></td>
     <td>{{ $finalfee }} $</td>
   </tr>
  
@@ -160,7 +161,7 @@ $originalfee = $registrationfee->amount;
   </tr>
   <tr>
     <td>7</td>
-    <td><b>Registration Fee</b></td>
+    <td><b>Monthly Fee</b></td>
     <td>{{ $originalfee }} $</td>
   </tr>
   <tr>
@@ -171,7 +172,7 @@ $originalfee = $registrationfee->amount;
 
     <tr>
     <td>9</td>
-    <td><b>Fee For this Student </b></td>
+   <td><b>Fee For this Student of {{ $month }} </b></td>
     <td>{{ $finalfee }} $</td>
   </tr>
  
