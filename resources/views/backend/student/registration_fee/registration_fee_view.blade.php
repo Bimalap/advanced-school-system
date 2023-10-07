@@ -1,8 +1,8 @@
 @extends('admin.admin_master')
 @section('admin')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
  <div class="content-wrapper">
 	  <div class="container-full">
 		<!-- Content Header (Page header) -->
@@ -81,20 +81,20 @@
 
  	<script id="document-template" type="text/x-handlebars-template">
 
- 		<table class="table table-bordered table-striped" style="width: 100%">
- 			<thead>
+ 	<table class="table table-bordered table-striped" style="width: 100%">
+ 	<thead>
  		<tr>
         @{{{thsource}}}
  		</tr>
- 	 		</thead>
- 			 <tbody>
+ 	 </thead>
+ 	 <tbody>
  	 	@{{#each this}}
  	 	<tr>
  	 		@{{{tdsource}}}	
  	 	</tr>
  	 	@{{/each}}
- 		 </tbody>
- 		</table>
+ 	 </tbody>
+ 	</table>
     </script>
 
     
@@ -143,4 +143,3 @@
 
 
 @endsection
-
