@@ -23,14 +23,7 @@ use App\Http\Controllers\Backend\Student\ExamFeeController;
 
 use App\Http\Controllers\Backend\Employee\EmployeeRegController;
 use App\Http\Controllers\Backend\Employee\EmployeeSalaryController;
-
-
-
-
-
-
-
-
+use App\Http\Controllers\Backend\Employee\EmployeeLeaveController;
 
 
 
@@ -210,9 +203,14 @@ Route::prefix('employees')->group(function(){
 
     // Employee Salary All Routes 
     Route::get('salary/employee/view', [EmployeeSalaryController::class, 'SalaryView'])->name('employee.salary.view');
-
+    Route::get('salary/employee/increment/{id}', [EmployeeSalaryController::class, 'SalaryIncrement'])->name('employee.salary.increment');
+    Route::post('salary/employee/store/{id}', [EmployeeSalaryController::class, 'SalaryStore'])->name('update.increment.store');
+    Route::get('salary/employee/details/{id}', [EmployeeSalaryController::class, 'SalaryDetails'])->name('employee.salary.details');
 
     }); 
+    
+// Employee Leave All Routes 
+    Route::get('leave/employee/view', [EmployeeLeaveController::class, 'LeaveView'])->name('employee.leave.view');
     
 }); 
 

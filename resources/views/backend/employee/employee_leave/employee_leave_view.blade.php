@@ -5,15 +5,20 @@
  <div class="content-wrapper">
 	  <div class="container-full">
 		<!-- Content Header (Page header) -->
+		 
+
 		<!-- Main content -->
 		<section class="content">
 		  <div class="row">
+			  
+			 
+
 			<div class="col-12">
 
 			 <div class="box">
 				<div class="box-header with-border">
-				  <h3 class="box-title">Employee Salary List</h3>
-	<a href="" style="float: right;" class="btn btn-rounded btn-success mb-5"> Add Employee Salary</a>			  
+				  <h3 class="box-title">Employee Leave </h3>
+	<a href="" style="float: right;" class="btn btn-rounded btn-success mb-5"> Add Employee Leave</a>			  
 
 				</div>
 				<!-- /.box-header -->
@@ -23,32 +28,31 @@
 						<thead>
 			<tr>
 				<th width="5%">SL</th>  
-				<th>Name</th> 
-				<th>ID NO</th>
-				<th>Mobile</th>
-				<th>Gender</th>
-				<th>Join Date</th>
-				<th>Salary</th> 
-				<th width="20%">Action</th>
+				<th>Name</th>
+				<th>ID No </th>
+				<th>Purpose </th>
+				<th>Start Date</th>
+				<th>End Date</th> 
+				<th width="25%">Action</th>
 				 
 			</tr>
 		</thead>
 		<tbody>
-			@foreach($allData as $key => $value )
+			@foreach($allData as $key => $leave )
 			<tr>
 				<td>{{ $key+1 }}</td>
-				<td> {{ $value->name }}</td>	
-				<td> {{ $value->id_no }}</td>	
-				<td> {{ $value->mobile }}</td>	
-				<td> {{ $value->gender }}</td>	
-				<td> {{ date('Y-m-d',strtotime($value->join_date))  }}</td>	
-				<td> {{ $value->salary }}</td>	 
-				<td>
-		<a title="Increment" href="{{ route('employee.salary.increment',$value->id) }}" class="btn btn-info"> <i class="fa fa-plus-circle"></i></a>
+				<td> {{ $leave['user']['name'] }}</td>
+				<td> {{ $leave['user']['id_no'] }}</td>
+				<td> {{ $leave['purpose']['name'] }}</td>
+				<td> {{ $leave->start_date }}</td>
+				<td> {{ $leave->end_date }}</td>
 
-		<a title="Details" target="_blank" href="{{ route('employee.salary.details',$value->id) }}" class="btn btn-danger"><i class="fa fa-eye"></i></a>
+				<td>
+<a href="" class="btn btn-info">Edit</a>
+<a href="" class="btn btn-danger" id="delete">Delete</a>
 
 				</td>
+				 
 			</tr>
 			@endforeach
 							 
@@ -73,4 +77,9 @@
 	  
 	  </div>
   </div>
+
+
+
+
+
 @endsection
