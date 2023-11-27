@@ -18,7 +18,7 @@
 			 <div class="box">
 				<div class="box-header with-border">
 				  <h3 class="box-title">Employee Leave </h3>
-	<a href="" style="float: right;" class="btn btn-rounded btn-success mb-5"> Add Employee Leave</a>			  
+	<a href="{{ route('employee.leave.add') }}" style="float: right;" class="btn btn-rounded btn-success mb-5"> Add Employee Leave</a>			  
 
 				</div>
 				<!-- /.box-header -->
@@ -48,8 +48,8 @@
 				<td> {{ $leave->end_date }}</td>
 
 				<td>
-<a href="" class="btn btn-info">Edit</a>
-<a href="" class="btn btn-danger" id="delete">Delete</a>
+<a href="{{ route('employee.leave.edit',$leave->id) }}" class="btn btn-info">Edit</a>
+<a href="{{ route('employee.leave.delete',$leave->id) }}" class="btn btn-danger" id="delete">Delete</a>
 
 				</td>
 				 
