@@ -30,20 +30,21 @@
 
 
 <table id="customers">
-  <tr>
+<tr>
     <td><h2>
-  <?php $image_path = '/upload/easyschool.png'; ?>
-  <img src="{{ public_path() . $image_path }}" width="200" height="100">
+  <?php $image_path = '/backend/images/logo.png'; ?>
+  <img src="{{ public_path() . $image_path }}" width="100" height="100">
 
     </h2></td>
-    <td><h2>Advanced School System </h2>
-<p>School Address</p>
-<p>Phone : p</p>
-<p>Email : support@Advanced.com</p>
-<p> <b> Employee Monthly Salary </b> </p>
+    <td><h2>Advanced school System</h2>
+<p>XYZ STREET Nepal</p>
+<p>Phone : 091691453</p>
+<p>Email : support@advancedschoolsystem.com</p>
+<p> <b> Employee Monthly  Salary</b> </p>
 
     </td> 
   </tr>
+  
   
    
 </table>
