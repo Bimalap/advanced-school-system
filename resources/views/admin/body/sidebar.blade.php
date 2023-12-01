@@ -122,6 +122,20 @@ $route = Route::current()->getName();
 
            </ul>
         </li>
+        
+
+<li class="treeview {{ ($prefix == '/marks')?'active':'' }}">
+          <a href="#">
+             <i data-feather="edit-2"></i> <span> Marks Management</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+        <li class="{{ ($route == 'marks.entry.add')?'active':'' }}"><a href="{{ route('marks.entry.add') }}"><i class="ti-more"></i>Marks Entry</a></li> 
+            
+          </ul>
+        </li>
 
         
        		  
