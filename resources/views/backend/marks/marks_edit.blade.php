@@ -15,19 +15,14 @@
 <div class="col-12">
 <div class="box bb-3 border-warning">
 				  <div class="box-header">
-					<h4 class="box-title">Student <strong>Marsk Entry</strong></h4>
+					<h4 class="box-title">Edit <strong>Marsk Entry</strong></h4>
 				  </div>
 
-				  <div class="box-body">
-				
-		<form method="post" action="{{ route('marks.entry.store') }}">
+				  <div class="box-body">		
+		<form method="post" action="{{ route('marks.entry.update') }}">
 			@csrf
 			<div class="row">
-
-
-
 <div class="col-md-3">
-
  		 <div class="form-group">
 		<h5>Year <span class="text-danger"> </span></h5>
 		<div class="controls">
@@ -71,6 +66,8 @@
 		<div class="controls">
 	 <select name="assign_subject_id" id="assign_subject_id"  required="" class="form-control">
 			<option  selected="" >Select Subject</option>
+			  
+			 
 		</select>
 	  </div>		 
 	  </div>
@@ -127,7 +124,7 @@
  			</tbody>
  			
  		</table>
- <input type="submit" class="btn btn-rounded btn-primary" value="Submit">
+ <input type="submit" class="btn btn-rounded btn-primary" value="Update">
 
  	</div>
  	
@@ -155,9 +152,9 @@
     var assign_subject_id = $('#assign_subject_id').val();
     var exam_type_id = $('#exam_type_id').val();
      $.ajax({
-      url: "{{ route('student.marks.getstudents')}}",
+      url: "{{ route('student.edit.getstudents')}}",
       type: "GET",
-      data: {'year_id':year_id,'class_id':class_id},
+      data: {'year_id':year_id,'class_id':class_id,'assign_subject_id':assign_subject_id,'exam_type_id':exam_type_id},
       success: function (data) {
         $('#marks-entry').removeClass('d-none');
         var html = '';
@@ -168,7 +165,7 @@
           '<td>'+v.student.name+'</td>'+
           '<td>'+v.student.fname+'</td>'+
           '<td>'+v.student.gender+'</td>'+
-          '<td><input type="text" class="form-control form-control-sm" name="marks[]" ></td>'+
+          '<td><input type="text" class="form-control form-control-sm" name="marks[]" value=" '+v.marks +' " ></td>'+
           '</tr>';
         });
         html = $('#marks-entry-tr').html(html);
