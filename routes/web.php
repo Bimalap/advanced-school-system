@@ -41,19 +41,18 @@ use App\Http\Controllers\Backend\Report\AttenReportController;
 use App\Http\Controllers\Backend\Report\ResultReportController;
 
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+Route::group(['middleware' => 'prevent-back-history'],function(){
+   
+   
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
+
+    Route::get('/', function () {
+        return view('auth.login');
+    });
+    
+    Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
         return view('admin.index');
-    })->name('dashboard'); 
-});
+    })->name('dashboard');
 
 route::get('/admin/logout',[AdminController::class,'logout'])->name('admin.logout');
 
@@ -306,7 +305,9 @@ Route::prefix('accounts')->group(function(){
     
 
 
-}); 
+}); // End Middleare Auth Route 
+
+});  // Prevent Back Middleare
 
 
 
