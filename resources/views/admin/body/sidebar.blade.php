@@ -64,9 +64,10 @@ $route = Route::current()->getName();
           </ul>
         </li>
 
+        @if(Auth::user()->role == 'Admin')
         <li class="treeview {{ ($prefix == '/setups')?'active':'' }}">
           <a href="#">
-            <i data-feather="settings"></i> <span>Setting</span>
+            <i data-feather="settings"></i> <span>Parameter Setup</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -86,6 +87,7 @@ $route = Route::current()->getName();
 
           </ul>
         </li>
+        @endif
 
         <li class="treeview {{ ($prefix == '/students')?'active':'' }}">
           <a href="#">
@@ -177,27 +179,7 @@ $route = Route::current()->getName();
         
        		  
          
-        <li class="header nav-small-cap"></li>
-          
-        <li class="treeview">
-          <a href="#">
-            <i data-feather="grid"></i>
-            <span>Components</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href=""><i class="ti-more"></i></a></li>
-            <li><a href=""><i class="ti-more"></i></a></li>
-            <li><a href=""><i class="ti-more"></i></a></li>
-            <li><a href=""><i class="ti-more"></i></a></li>
-            <li><a href=""><i class="ti-more"></i></a></li>
-            <li><a href=""><i class="ti-more"></i></a></li>
-            <li><a href=""><i class="ti-more"></i></a></li>
-            <li><a href=""><i class="ti-more"></i> </a></li>
-          </ul>
-        </li>       
+        
         
       </ul>
     </section>
